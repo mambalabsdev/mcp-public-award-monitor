@@ -1,0 +1,61 @@
+{
+  "name": "@mambalabsdev/mcp-public-award-monitor",
+  "displayName": "Government Contract Award Monitor",
+  "version": "1.0.0",
+  "description": "MCP server for the Mamba Labs Government Contract Award Monitor actor on Apify. Pick a public award register and a time window, get back the companies that won public work in it.",
+  "type": "module",
+  "bin": {
+    "mcp-public-award-monitor": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "govcon",
+    "award-signals",
+    "apify",
+    "clay"
+  ],
+  "tags": [
+    "mcp",
+    "govcon",
+    "award-signals",
+    "apify",
+    "clay"
+  ],
+  "category": "productivity",
+  "author": {
+    "name": "Mamba Labs",
+    "email": "labs@mambamindsetgrowth.com"
+  },
+  "license": "MIT",
+  "logo": "https://mmg-brand-assets.netlify.app/apify-actor-pngs/apify_webhook.png",
+  "homepage": "https://mambabuilt.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-public-award-monitor"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "mcpServers": ".mcp.json",
+  "mcpName": "com.mambabuilt/mcp-public-award-monitor"
+}
