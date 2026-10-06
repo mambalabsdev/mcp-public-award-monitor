@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "mcp-public-award-monitor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MCP server for the Mamba Labs Government Contract Award Monitor actor on Apify. Pick a public award register and a time window, get back the companies that won public work in it.",
   "author": {
     "name": "Mamba Labs"
