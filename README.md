@@ -43,6 +43,7 @@ Register and window in, the companies that won public work out.
 | `exclude_government_recipients` | boolean | no | Drops winners that are themselves government, universities, or public authorities. Leave this on for the grant registers or you get state departments of education instead of companies. Default `true`. |
 | `resolve_domains` | boolean | no | Looks up each winner's website. Turning it off makes the run roughly 20x faster and returns `recipient_domain` as null with `domain_status` `not_attempted`. Default `true`. |
 | `domain_confidence_floor` | enum | no | `strict`, `standard` or `loose`. Strict returns fewer domains and almost no wrong ones. Loose returns the most domains and about a third of them are wrong. Default `standard`. |
+| `max_charge_usd` | number | no | Optional spending cap for this call, in USD. The actor stops before any charge that would take the run past this amount and keeps every row already charged. |
 
 ## Reading the output
 
@@ -52,7 +53,14 @@ One row per winning company, not one per award. `total_award_value`, `largest_aw
 
 You are charged per winning company returned, plus a small actor start fee. `max_entities` is therefore a hard cost cap.
 
-Pricing is on the [actor's Apify page](https://apify.com/mambalabs/public-award-monitor). Running this server consumes Apify credits.
+Prices from the live pricing record, read 2026-10-16:
+
+| Event | Price per event (USD) | Fires when |
+| --- | --- | --- |
+| `apify-actor-start` | $0.00005 | Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event). |
+| `award-winner-found` | $0.005 on the Free plan, down to $0.00425 on higher Apify plans | Charged once per company returned that won a public contract or grant in your window. Summary rows carry no company and are never charged. |
+
+The current price is on the [actor's Apify page](https://apify.com/mambalabs/public-award-monitor). Running this server consumes Apify credits.
 
 ## What this server does and does not do
 
