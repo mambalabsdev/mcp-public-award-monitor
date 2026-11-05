@@ -4,7 +4,7 @@
 
 <a href="https://mcprush.com/to/public-award-monitor-mcp?ref=badge"><img width="380" height="200" src="https://mcprush.com/badge/public-award-monitor-mcp/card.svg" alt="Public Award Monitor MCP server" /></a>
 
-MCP server for the Mamba Labs [Government Contract Award Monitor](https://apify.com/mambalabs/public-award-monitor) actor on Apify.
+MCP server for the Mamba Labs [US and UK Contract Award Winners by Company](https://apify.com/mambalabs/public-award-monitor) actor on Apify.
 
 Pick a register and a time window. It returns the companies that won public work in that window, one flat row per winning company, with award count, total value, awarding body, award date, and a resolved company domain.
 
